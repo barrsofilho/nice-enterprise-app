@@ -22,7 +22,7 @@ sap.ui.define(
       getModelData(modelName) {
         return this.getModel(modelName).getData();
       },
-
+      
       setModel(modelName, data) {
         return this.getView().setModel(new JSONModel(data), modelName);
       },
@@ -34,7 +34,7 @@ sap.ui.define(
         if (Array.isArray(data)) model.setData(data);
         else model.setData({ ...data, ...changes });
       },
-
+      
       getI18nText(key, ...params) {
         return this.getView().getModel("i18n").getResourceBundle().getText(key, params);
       },
